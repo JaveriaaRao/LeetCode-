@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int lengthOfLastWord(string s) {
+       bool flag=true;
+       int myans=0;
+       for(int i=s.length()-1;i>=0;i--)
+       {
+        if(s[i]==' ' && flag==false)
+        {
+            break;
+        }
+        else if(s[i]!=' '){
+           flag=false;
+           myans++;
+        }
+
+       }
+        
+      return myans;
+    }
+};
+https://leetcode.com/problems/length-of-last-word/submissions/?envType=problem-list-v2&envId=string
